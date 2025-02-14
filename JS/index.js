@@ -4,6 +4,10 @@ function convertir() {
     let Resultado = document.getElementById('resultado');
     let resultadoConversion = 0;
 
+    if (!valor || valor <= 0 || conversion === '') {
+        alert('ingrese un número válido y seleccione una conversión.');
+        return false;
+    }
 
     if (conversion === 'km-m') {
         resultadoConversion = valor * 1000;
@@ -20,3 +24,4 @@ function convertir() {
     Resultado.textContent = resultadoConversion;
     return false; 
 }
+
